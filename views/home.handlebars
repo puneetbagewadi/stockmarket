@@ -1,1 +1,15 @@
-<h1>Handlebars homepage</h1>
+<div class="jumbotron">
+  <h1 class="display-4">{{stockDetails.companyName }}({{stockDetails.symbol}})</h1>
+  <strong>Latest Price: </strong>${{stockDetails.latestPrice}}</br>
+  <strong>Previous Close: </strong>${{stockDetails.previousClose }}</br>
+  <strong>Percentage Change: </strong>{{stockDetails.changePercent }}%</br>
+  <strong>Market Cap: </strong>${{stockDetails.marketCap }}</br>
+  <strong>Week 52 high: </strong>${{stockDetails.week52High }}</br>
+  <strong>Week 52 low: </strong>${{stockDetails.week52Low }}</br>
+  <strong>US market open: </strong>{{stockDetails.isUSMarketOpen }}
+</div>
+
+{{!-- 
+{{#each stockDetails }}
+{{@key}} | {{this}} </br>
+{{/each}} --}}
